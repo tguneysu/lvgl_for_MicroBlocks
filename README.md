@@ -50,7 +50,7 @@ You need to add the LVGL library to Microblocks. Download the `lvgl.ubl` [librar
 
 ## Examples
 
-Some example code that can be run on an M5Stack Cre 2 without additional hardware, can be found in the [M5core 2 LVGL example directory](https://github.com/ste7anste7an/smallvm_lms/tree/dev/lvgl_mb/microblocks/m5core2).
+Some example code that can be run on an M5Stack Core 2 without additional hardware, can be found in the [M5core 2 LVGL example directory](https://github.com/ste7anste7an/smallvm_lms/tree/dev/lvgl_mb/microblocks/m5core2).
 
 # LVGL library
 ## Objects
@@ -62,7 +62,7 @@ A number of general modifiers are available for most of the widgets
 
 ![set_pos](https://github.com/user-attachments/assets/b7b28433-2294-4a2c-943a-eab7746bbcbf)
 
-position: determines the possition relative to its parent
+position: determines the position relative to its parent
 
 ![set_size](https://github.com/user-attachments/assets/74c7d23d-6fa6-489b-b6ed-1b0109267687)
   
@@ -84,7 +84,7 @@ Here, for simplicity, the name of the button is automatically used as the text w
 
 ![expanded_button](https://github.com/user-attachments/assets/835d8e87-87c5-4a9f-bbc7-c2b186893191)
 
-The button blocks has a number of extra fields. You can change the text size ranging from 1 to 4 mapping on a 14, 24, 40 and 48 points font. A sperate `text` field allows for a text that is different than the button name. The `parent` field refers to the name of a parent object. The default value is the main screen (`lv_scr_act`). A parent can be a tab in a tabview or a tile in a tileview.
+The button blocks have a number of extra fields. You can change the text size ranging from 1 to 4 mapping on a 14, 24, 40 and 48 points font. A separate `text` field allows for a text that is different than the button name. The `parent` field refers to the name of a parent object. The default value is the main screen (`lv_scr_act`). A parent can be a tab in a tabview or a tile in a tileview.
 
 ## Label
 ![image](https://github.com/user-attachments/assets/b98ddd9a-365a-4311-9191-1a698a0d3c87)
@@ -97,7 +97,7 @@ Like the button block, here the text in the label defaults to the name of the la
 
 ![expanded_label](https://github.com/user-attachments/assets/efa0c3f1-d7f4-4ab7-a02b-0f302039e06e)
 
-The expanded label block has similar fileds as the button block.
+The expanded label block has similar fields as the button block.
 
 ## Arc
 ![image](https://github.com/user-attachments/assets/8ba122d0-5431-4e28-bedb-abff209f7a3b)
@@ -110,15 +110,15 @@ Some of the properties of the arc can be changed.
 
 ![set_range](https://github.com/user-attachments/assets/2c3e8244-5e5c-47ee-81c4-7e4649798671)
 
-Changes the start end end scale of the arc (default 0 to 100)
+Changes the start and end scale of the arc (default 0 to 100)
 
 ![set_angles](https://github.com/user-attachments/assets/244bce33-abd0-4adf-9394-fdaacf4cbc63)
 
-Changes the start en end angle of the scale of an arc. Zero degrees is at the middle right (3 o'clock) of the object and the degrees are increasing in clockwise direction. The angles should be in the [0;360] range.
+Changes the start and end angle of the scale of an arc. Zero degrees is at the middle right (3 o'clock) of the object and the degrees increase in clockwise direction. The angles should be in the [0;360] range.
 
 ![set_rotation](https://github.com/user-attachments/assets/71021e68-68cb-42f4-a173-6dd0515c5d11)
 
-Determines he angle of the 0 degree point on the scale with respect to the background.
+Determines the angle of the 0 degree point on the scale with respect to the background.
 
 ![get_val](https://github.com/user-attachments/assets/a15f9069-f6d2-4356-8c52-892fc4ea70cb)
 
@@ -139,7 +139,7 @@ Some of the properties of a slider can be changed.
 
 ![set_range](https://github.com/user-attachments/assets/2c3e8244-5e5c-47ee-81c4-7e4649798671)
 
-Changes the start end end scale of the arc (default 0 to 100)
+Changes the start and end scale of the arc (default 0 to 100)
 
 ![get_val](https://github.com/user-attachments/assets/a15f9069-f6d2-4356-8c52-892fc4ea70cb)
 
@@ -157,7 +157,7 @@ A bar is drawn using the generic add object block, where from the drop down `bar
 ## Led
 ![image](https://github.com/user-attachments/assets/71031ef4-ddac-4011-b372-3426495f442a)
 
-The value of a led (wther it is on or off) avn be set by the `set_val` block with a boolena as argument:
+The value of an led (whether it is on or off) can be set by the `set_val` block with a boolena as argument:
 
 ![set_val](https://github.com/user-attachments/assets/467a0674-3209-42e0-96c2-d83671495cd3)
 
@@ -200,7 +200,7 @@ When a value is selected in a roller, an event is created and the string of the 
 
 # More complicated widgets
 
-The following widgets are more complex in nature and make use of the `set [] parent [ ]` block, which allows to determine the hierarchy of one widgets to another. The container widgets `list`, `tabview` and `tileview` are widgets that can act as a parent for widgtes like `buttons` or `labels', etc.
+The following widgets are more complex in nature and make use of the `set [] parent [ ]` block, which allows to determine the hierarchy of one widget to another. The container widgets `list`, `tabview` and `tileview` are widgets that can act as a parent for widgets like `buttons` or `labels', etc.
 
 ## List
 ![image](https://github.com/user-attachments/assets/81164ee9-2119-41b7-9d29-416cbba2b957)
@@ -213,10 +213,10 @@ When a list is added, you will see an empty area. Now you can add other widgets 
 
 ![add_button_to_list](https://github.com/user-attachments/assets/a256ffd7-816e-4f94-8206-82d05b03cfbb)
 
-Another way of adding widgets to a list, is by using the `set_parent` blcok on an existing widget to add it to a list.
+Another way of adding widgets to a list, is by using the `set_parent` block on an existing widget to add it to a list.
 
 ## Tabview
-The Tab view object can be used to organize content in tabs. Look in hte lVGL documentation for an [example of a tabview](https://docs.lvgl.io/9.2/widgets/tabview.html#simple-tabview).
+The Tab view object can be used to organize content in tabs. Look in the lVGL documentation for an [example of a tabview](https://docs.lvgl.io/9.2/widgets/tabview.html#simple-tabview).
 
 You start by creating a tabview.
 
@@ -243,7 +243,7 @@ Within this tileview new tiles can be created using
 
 ![add_tile](https://github.com/user-attachments/assets/5981c89f-da71-468f-8db0-73a00c883ac5)
 
-As a parent you take the `tileview` name that was created before. A new tile is created on column `col` and row `row`. The booleans define whethe you can swipe in the directory (left, right, top, bottom) to reach a next tile.
+As a parent you take the `tileview` name that was created before. A new tile is created on column `col` and row `row`. The booleans define whether you can swipe in the directory (left, right, top, bottom) to reach a next tile.
 
 Once a tile is created, any widget can be added to the tile by setting the `parent` to the specific tile's name.
 
@@ -262,9 +262,9 @@ When the evwnt is caught, the function
 
 ![get_event](https://github.com/user-attachments/assets/7434fba7-9afe-4d46-aee7-d93dcd0f5cf6)
 
-returns the name of the widget that caused the event. Within the `When` clause, we can check the which widget caused the event and handle appriately by reading the value of the widget.
+returns the name of the widget that caused the event. Within the `When` clause, we can check which widget caused the event and handle appropriately by reading the value of the widget.
 
-The following event handler check whether a button `button` is pressed . It calls a function to handle accordingly, or it checks wether an `arc` widget changed its value and stores the value of the `arc` in a global variable.
+The following event handler checks whether a button `button` is pressed . It calls a function to handle it accordingly, or it checks whether an `arc` widget changed its value and stores the value of the `arc` in a global variable.
 
 ![handle_event-button_arc](https://github.com/user-attachments/assets/795acefd-a91f-4c16-8411-c9666241ed87)
 
@@ -278,13 +278,13 @@ Initializes the callback handling. This should be called once at the beginning o
 
 ![add-callback](https://github.com/user-attachments/assets/59c0c7bf-2a9c-44ec-b4cd-d90c084bba36)
 
-This block add an event call back function to a widget's name. The function must be defined as a `command block` and it's name is eneterd as a string. Every widget that creates an event should have it's own callback function.
+This block adds an event callback function to a widget's name. The function must be defined as a `command block` and it's name is eneterd as a string. Every widget that creates an event should have it's own callback function.
 
 ![handle_event](https://github.com/user-attachments/assets/80e111e6-5787-4d54-8a01-51341a47ced1)
 
-The evnthandler itself is called n the `When ` block that checks for new events. As an argument the `get_event` is passed.
+The eventhandler itself is called in the `When ` block that checks for new events. As an argument the `get_event` is passed.
 
-Below is an example program that shows how to handle different event with each their own callback function.
+Below is an example program that shows how to handle different events with each of their own callback function.
 
 ![example_event_handler](https://github.com/user-attachments/assets/8391e205-cda1-45d4-8e07-5dd077f78bca)
 
